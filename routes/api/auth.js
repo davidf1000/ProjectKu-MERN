@@ -11,6 +11,7 @@ const config = require('config');
 // @desc       Authenticate user & get token 
 // @access      Public
 
+// GET give REQUEST TOKEN , get User data 
 router.get('/', auth, async (req, res) => {
     try{
         const user = await User.findById(req.user.id).select('-password');
@@ -20,6 +21,7 @@ router.get('/', auth, async (req, res) => {
         res.status(500).send('Server Error ! ');
     }
 });
+// POST Login , get token 
 router.post(
     '/',
     [

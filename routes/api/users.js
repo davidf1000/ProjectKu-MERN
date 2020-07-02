@@ -11,6 +11,7 @@ const User = require('../../models/User');
 // @desc        Register User
 // @access      Public
 
+//Register , get Token 
 router.post(
   '/',
   [
