@@ -6,6 +6,9 @@ const PORT = 3000 || process.env.PORT;
 const connectDB = require('./config/db');
 connectDB();
 
+//Middle Ware
+app.use(express.json({extended:false}));
+
 app.get('/', (req, res) => {
   res.send('Home Route');
 });
@@ -17,4 +20,5 @@ app.use('/api/profile',require('./routes/api/profile') );
 
 app.listen(PORT, () => {
   console.log('Server Started on port %s', PORT);
+  
 });
