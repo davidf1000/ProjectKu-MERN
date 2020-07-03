@@ -10,8 +10,6 @@ const User = require('../../models/User');
 // @desc       get current users profile
 // @access      Private (need middleware auth)
 
-router.get('/', (req, res) => res.send('profile route'));
-
 router.get('/me', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({
@@ -98,5 +96,69 @@ router.post(
     }
   }
 );
+
+// @route       GET api/profile
+// @desc       get all profiles 
+// @access      public
+
+router.get('/',async(req,res)=>{
+  try{
+    const profiles = await Profile.find().populate('user',['name','avatar']);
+    res.json(profiles);
+  }
+  catch(err)
+  {
+    console.error(err.message);
+    res.status(500).send('Server Error !');
+  }
+});
+
+// @route       GET api/profile/user/:user_id
+// @desc       get profiles by user_id 
+// @access      public
+
+router.get('/user/:user_id',async(req,res)=>{
+  try{
+    const profiles = await Profile.findOne({user:req.params.user_id}).populate('user',['name','avatar']);
+    if(!profiles){
+      return res.status(400).json({msg:"no profile for this user !"});
+    }
+    res.json(profiles);
+  } 
+  catch(err)
+  {
+    console.error(err.message);
+    console.log(err.kind);
+
+    if(err.kind==='ObjectId'){
+      return res.status(400).json({msg:"no profile for this user !"});
+    }
+    res.status(500).send('Server Error !');
+  }
+});
+
+// @route       GET api/profile/user/:user_id
+// @desc       get profiles by user_id 
+// @access      public
+
+router.get('/user/:user_id',async(req,res)=>{
+  try{
+    const profiles = await Profile.findOne({user:req.params.user_id}).populate('user',['name','avatar']);
+    if(!profiles){
+      return res.status(400).json({msg:"no profile for this user !"});
+    }
+    res.json(profiles);
+  } 
+  catch(err)
+  {
+    console.error(err.message);
+    console.log(err.kind);
+
+    if(err.kind==='ObjectId'){
+      return res.status(400).json({msg:"no profile for this user !"});
+    }
+    res.status(500).send('Server Error !');
+  }
+});
 
 module.exports = router;

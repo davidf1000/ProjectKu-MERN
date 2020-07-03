@@ -1,3 +1,5 @@
+// Connect ke DB atlas , dipakai di server.js
+
 const mongoose = require('mongoose');
 const config = require('config');
 const db = config.get('MongoURI');

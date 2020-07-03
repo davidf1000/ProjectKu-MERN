@@ -7,11 +7,11 @@ const jwt = require('jsonwebtoken');
 const config = require('../../config/default.json');
 secretKey = config.jwtSecret;
 const User = require('../../models/User');
-// @route       POST api/users
-// @desc        Register User
-// @access      Public
 
-//Register , get Token 
+
+// @route       POST api/users
+// @desc        Register User , dapet token json
+// @access      Public
 router.post(
   '/',
   [

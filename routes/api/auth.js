@@ -9,9 +9,8 @@ const config = require('config');
 
 // @route     GET api/auth
 // @desc       Authenticate user & get token 
-// @access      Public
+// @access      PRivate
 
-// GET give REQUEST TOKEN , get User data 
 router.get('/', auth, async (req, res) => {
     try{
         const user = await User.findById(req.user.id).select('-password');
@@ -21,7 +20,10 @@ router.get('/', auth, async (req, res) => {
         res.status(500).send('Server Error ! ');
     }
 });
-// POST Login , get token 
+// @route     POST api/auth
+// @desc       Login, get token
+// @access      public
+
 router.post(
     '/',
     [
