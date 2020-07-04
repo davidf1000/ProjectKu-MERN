@@ -22,7 +22,9 @@
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.20",
-    "normalize-url": "^5.0.0"
+    "node-fetch": "^2.6.0",
+    "normalize-url": "^5.0.0",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
