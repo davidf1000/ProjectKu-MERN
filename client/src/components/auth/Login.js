@@ -1,7 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import {Link} from 'react-router-dom';
+//Redux Connect
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import {login} from '../../actions/auth';
 
-export const Login = () => {
+
+export const Login = ({login}) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -16,6 +21,8 @@ export const Login = () => {
   {
       e.preventDefault();
       console.log(formData);
+      login({email,password});
+
 
   }
   return (
@@ -57,4 +64,8 @@ export const Login = () => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  login :PropTypes.func.isRequired
+}
+
+export default connect(null,{login})(Login);
