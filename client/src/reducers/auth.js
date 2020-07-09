@@ -14,7 +14,7 @@ export default function(state=initialState,action){
         case Action.USER_LOADED:
             return {
                 ...state,
-                isAuthenticaed:true,
+                isAuthenticated:true, 
                 loading:false,
                 user:payload
             }
@@ -24,17 +24,18 @@ export default function(state=initialState,action){
             return {
                 ...state,
                 ...payload,
-                isAuthenticaed:true,
+                isAuthenticated:true,
                 loading:false
             }
         case Action.AUTH_ERROR:
         case Action.LOGIN_FAIL:
         case Action.REGISTER_FAIL:
+        case Action.LOGOUT:
             localStorage.removeItem('token');
             return {
                 ...state,
                 ...payload,
-                isAuthenticaed:false,
+                isAuthenticated:false,
                 loading:false        
             }
         default:

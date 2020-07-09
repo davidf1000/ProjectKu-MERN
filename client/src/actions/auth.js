@@ -80,3 +80,7 @@ export const login = ({ email, password }) => async (dispatch) => {
     }
   };
   
+  // Logout/Clear
+  export const logout= () => dispatch => {
+    dispatch({type:Action.LOGOUT});
+  }
