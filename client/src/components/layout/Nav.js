@@ -10,7 +10,7 @@ export const Navbar = ({ auth, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to="/profile">Developers</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </li>
       <li>
         <Link onClick={logout} to='/'>

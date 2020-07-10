@@ -36,7 +36,9 @@ export default function(state=initialState,action){
                 ...state,
                 ...payload,
                 isAuthenticated:false,
-                loading:false        
+                loading:false,
+                user:null,
+                token:localStorage.getItem('token')   
             }
         default:
             return state;
