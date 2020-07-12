@@ -18,6 +18,46 @@ export const getCurrentProfile = () => async (dispatch) => {
     });
   }
 };
+
+//Get All Profile 
+export const getProfiles = () => async (dispatch) => {
+  dispatch({
+    type:Action.CLEAR_PROFILE
+  });
+  try {
+    const res = await axios.get('/api/profile');
+
+    dispatch({
+      type: Action.GET_PROFILES,
+      payload: res.data
+    });
+  } catch (err) {
+    console.log(err);
+    dispatch({
+      type: Action.PROFILE_ERROR,
+      payload: 'Error' //{msg:err.response.statusText}
+    });
+  }
+};
+
+//Get Profile by id 
+export const getProfileById = (userId) => async (dispatch) => {
+  try {
+    const res = await axios.get(`/api/profile/${userId}`);
+
+    dispatch({
+      type: Action.GET_PROFILE,
+      payload: res.data
+    });
+  } catch (err) {
+    console.log(err);
+    dispatch({
+      type: Action.PROFILE_ERROR,
+      payload: 'Error' //{msg:err.response.statusText}
+    });
+  }
+};
+
 //status: err.respose.status
 //Create or update profile
 export const createProfile = (formData, history, edit = false) => async (
@@ -169,3 +209,7 @@ export const deleteAccount = (id) => async (dispatch) => {
     }
   }
 };
+
+
+
+//Get Profile by ID 

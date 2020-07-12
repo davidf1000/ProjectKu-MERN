@@ -16,7 +16,13 @@ export default function(state=initialState,action) {
                 ...state,
                 profile:payload,
                 loading:false
-            }            
+            }         
+        case Action.GET_PROFILES:
+            return {
+                ...state,
+                profiles:payload,
+                loading:false
+            }   
         case Action.PROFILE_ERROR:
             return {
                 ...state,
