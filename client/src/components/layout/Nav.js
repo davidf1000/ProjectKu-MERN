@@ -16,6 +16,9 @@ export const Navbar = ({ auth, logout }) => {
         <Link to="/dashboard">Dashboard</Link>
       </li>
       <li>
+        <Link to="/posts">Posts</Link>
+      </li>
+      <li>
         <Link onClick={logout} to='/'>
           <span className="hide-sm">Logout</span>
         </Link>

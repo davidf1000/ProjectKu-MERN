@@ -174,7 +174,7 @@ router.post(
       post.comments.unshift(newComment);
       console.log(post);
       const posts = await post.save();
-      res.json(posts);
+      res.json(posts.comments);
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error !');
