@@ -36,18 +36,20 @@ which will run both backend with nodemon and react-app concurrently for easier d
 
 ### Documentation
 
-![register](https://user-images.githubusercontent.com/47879766/87720857-c5e56100-c7df-11ea-9496-91b7dcdae4cf.png)
+
 # Here's the Landing Page :
 ![Landing](https://user-images.githubusercontent.com/47879766/87720844-c3830700-c7df-11ea-8f24-f8d3dfafc4a1.png)
 # Register And Login :
 ![login](https://user-images.githubusercontent.com/47879766/87720851-c54cca80-c7df-11ea-9ae0-7031e53e2007.png)
-![profile](https://user-images.githubusercontent.com/47879766/87720853-c54cca80-c7df-11ea-83ae-1fd08d8cb232.png)
+![register](https://user-images.githubusercontent.com/47879766/87720857-c5e56100-c7df-11ea-9496-91b7dcdae4cf.png)
 # Dashboard
 ![dashboard](https://user-images.githubusercontent.com/47879766/87720832-c0881680-c7df-11ea-8c26-e209799af8fe.png)
 # Edit profile
 ![editProfile](https://user-images.githubusercontent.com/47879766/87720841-c3830700-c7df-11ea-96fa-b7fda43142a9.png)
 # developers section
 ![developers](https://user-images.githubusercontent.com/47879766/87720837-c251da00-c7df-11ea-8dc6-392c07626613.png)
+# check developer's profile
+![profile](https://user-images.githubusercontent.com/47879766/87720853-c54cca80-c7df-11ea-83ae-1fd08d8cb232.png)
 # timeline post section
 ![discussion](https://user-images.githubusercontent.com/47879766/87720839-c2ea7080-c7df-11ea-95c1-d38ebbaaf273.png)
  
