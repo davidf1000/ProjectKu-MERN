@@ -1,8 +1,11 @@
 # DevKu-MERN
-DevKu is a social network website that allows the user to meet and chat with developers from all around the world. Discussing anything related with programming and help other people to solve their mistakes. 
+DevKu is a social network website that allows the user to meet and chat with developers from all around the world. Discussing anything related with programming and help other people to solve their mistakes. <br>
 Created with MERN stack. Using Hooks and Redux for React front-end app with custom CSS and simple Design .
+<br>
 For the backend, it uses Bcrypt for password encryption and salting. JWT is used for REST API Call using middleware and token for secure data. 
+<br>
 The main purpose for this project is to implement all the basic things that i've learned from a lot of sources (udemy,youtube,etc) to create full-stack MERN application from scratch to better understand the concept and integration of the stack. 
+<br>
 # Heroku
 This Project is deployed on free-tier heroku :
 https://vibrant-bastille-90306.herokuapp.com/
