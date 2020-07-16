@@ -1,3 +1,6 @@
+
+![devku](https://user-images.githubusercontent.com/47879766/87722228-eca49700-c7e1-11ea-9196-c237571fcd32.png)
+
 # DevKu-MERN
 DevKu is a social network website that allows the user to meet and chat with developers from all around the world. Discussing anything related with programming and help other people to solve their mistakes. <br><br>
 Created with MERN stack. Using Hooks and Redux for React front-end app with custom CSS and simple Design .
